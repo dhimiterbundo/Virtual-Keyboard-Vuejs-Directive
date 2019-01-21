@@ -22,3 +22,18 @@ const alphaKeyboard = {
     '{t} _ - Z X C V B N M {space} {enter}'
   ]
 };
+```
+This is main event :
+
+``` javascript
+  events: {
+    keyboardChange: (e, keyboard, element) => {
+      // In case this event will be overwritten in directive options, it should
+      // handle v-model update by itself
+      const event = new Event('input', { bubbles: true });
+      element.value = $(element).val();
+      element.dispatchEvent(event);
+      Timer.restart();
+    }
+  }
+  ```
