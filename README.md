@@ -3,3 +3,22 @@
 This is a Directive for virtual Keyboard.
 I had to build this one for a street machine like ATM where there was no physic keyboard.
 This directive has 3 types of keyboard but you can modify depending on your needs.
+
+``` javascript
+const alphaKeyboard = {
+  normal: [
+    '{meta1} q w e r t y u i o p  ? ! {bksp} {a}',
+    '{s} a s d f g h j k l \' , . @',
+    '{t} _ - z x c v b n m {space} {enter}'
+  ],
+  meta1: [
+    '{meta1} 1 2 3 {a}',
+    '{t} 4 5 6 {bksp}',
+    '7 8 9 0'
+  ],
+  shift: [
+    '{meta1} Q W E R T Y U I O P  ? ! {bksp} {a}',
+    '{s} A S D F G H J K L \' , . @',
+    '{t} _ - Z X C V B N M {space} {enter}'
+  ]
+};
